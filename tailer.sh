@@ -4,7 +4,7 @@ BASE_DIR=$(dirname $LOG_PATTERN* | head -1)
 
 run_thread (){
     echo Running thread
-    tail -F $LOG_PATTERN* &
+    tail -n 0 -F $LOG_PATTERN* &
     THREAD_PID=$!
 }
 
